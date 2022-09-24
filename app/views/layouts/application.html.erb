@@ -31,7 +31,7 @@
 
                 <li>
                   <%= link_to user_path(current_user.id), class: 'nav-link text-light' do %>
-                  <i class="fa-solid fa-home"></i> Home
+                  <i class="fa-solid fa-home"aria-hidden="true"></i> Home
                   <% end %>
                 </li>
                 <li><a class="nav-link text-light" href="/users"><i class="fa fa-users" aria-hidden="true"></i> User</a></li>
@@ -55,6 +55,9 @@
     </header>
 
     <main>
+
+      <p><%= notice %></p>
+
       <%= yield %>
     </main>
 

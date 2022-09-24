@@ -1,2 +1,47 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h1>Editing Book</h1>
+      <div class="error_explanation"><% if @book.errors.any? %>
+  <h2><%= @book.errors.count %>件のエラーが発生しました</h2>
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+</div>
+       <%= form_with model: @book do |f| %>
+        <div class="form-group">
+            <label>Title</label>
+            <div><%= f.text_field :title, autofocus: true, id:"title", class: "form-control book_title" %></div>
+        </div>
+        <div class="form-group">
+            <label>Opinion</label>
+            <div><%= f.text_area :text, id:"text", class: "form-control book_text" %></div>
+        </div>
+
+         <%= f.submit "Update Book", class: "btn btn-sm btn-success edit_book_36035" %>
+<% end %>
+
+<span>
+    <%= link_to "Show", book_path(@book) %>
+</span>
+|
+<span>
+    <%= link_to "Back", books_path %>
+</span>
+
+<span></span>
+      
+      
+      
+    </div>
+    
+    
+  </div>
+  
+  
+</div>
