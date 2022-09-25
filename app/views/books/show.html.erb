@@ -50,11 +50,11 @@
 
       <div class="col-md-8 offset-md-1">
       <h2>Book detail</h2>
-      <table>
+      <table class="table">
          <tbody>
       <tr>
       <td><%= link_to user_path(@user.id) do %>
-        <%= image_tag 'no_image.jpg' %><br>
+        <%= image_tag @book.user.get_profile_image(100,100) %><br>
         <%= @book.user.name %>
         <% end %></td>
       <td>
