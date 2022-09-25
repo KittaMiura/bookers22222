@@ -34,14 +34,14 @@ end
     @book = Book.find(params[:id])
     if @book.user.id != current_user.id
       redirect_to user_path(current_user.id)
+    end
   end
-end
 
   def update
     @book = Book.find(params[:id])
     @book.update(book_params)
     if @book.save
-      redirect_to books_path(@book), notice: 'You have updated book successfully..'
+      redirect_to book_path(@book.id), notice: 'You have updated book successfully..'
     else
       render :edit
     end
@@ -64,5 +64,5 @@ private
     @user = @book.user
     redirect_to(books_path) unless @user == current_user
 
-end
+  end
 end
