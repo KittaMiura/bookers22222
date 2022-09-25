@@ -37,41 +37,41 @@
                 </li>
                 <li>
                   <%= link_to users_path, class: 'nav-link text-light' do %>
-                  <i class="fa fa-users" aria-hidden="true"></i> User
+                  <i class="fas fa-users" aria-hidden="true"></i> User
                   <% end %>
                 </li>
                 <li>
                   <%= link_to books_path, class: 'nav-link text-light' do %>
-                  <i class="fa fa-book-open" aria-hidden="true"></i> Books
+                  <i class="fas fa-book-open" aria-hidden="true"></i> Books
                   <% end %>
                 </li>
 
                 <li>
                   <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-light' do %>
-                  <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i> Log out
+                  <i class="fas fa-sign-out-alt" aria-hidden="true"></i> Log out
                   <% end %>
                 </li>
 
               <% else %>
                 <li>
                   <%= link_to root_path, class: 'nav-link text-light' do %>
-                  <i class="fa-solid fa-home" aria-hidden="true"></i> Home
+                  <i class="fas fa-home" aria-hidden="true"></i> Home
                   <% end %>
                 </li>
 
                 <li>
-                  <%= link_to about_path, class: 'nav-link text-light' do %>
-                  <i class="fa-solid fa fa-link"></i> About
+                  <%= link_to homes_about_path, class: 'nav-link text-light' do %>
+                  <i class="fas fa-link"></i> About
                   <% end %>
                 </li>
                 <li>
                   <%= link_to new_user_registration_path, class: 'nav-link text-light' do %>
-                  <i class="fa-solid fa-user-plus" aria-hidden="true"></i> Sign up
+                  <i class="fas fa-user-plus" aria-hidden="true"></i> Sign up
                   <% end %>
                   </li>
                 <li>
                   <%= link_to new_user_session_path, class: 'nav-link text-light' do %>
-                  <i class="fa-solid fa-sign-in-alt" aria-hidden="true"></i> Log in
+                  <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Log in
                   <% end %>
                 </li>
               <% end %>
