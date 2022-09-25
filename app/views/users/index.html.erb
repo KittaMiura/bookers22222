@@ -56,12 +56,12 @@
                <th></th>
              </tr>
            </thead>
+           <% @users.each do |user| %>
            <tbody>
-             <% @users.each do |user| %>
              <tr>
-               <th><%= image_tag @user.get_profile_image(100,100) %></th>
-               <th><%= user.name %></th>
-               <th><%= link_to user_path(user.id) do %>Show<% end %></th>
+               <td><%= image_tag @user.get_profile_image(100,100) %></td>
+               <td><%= user.name %></td>
+               <td><%= link_to user_path(user.id) do %>Show<% end %></td>
              </tr>
            </tbody>
            <% end %>
